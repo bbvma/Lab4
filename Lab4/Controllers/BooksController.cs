@@ -41,7 +41,7 @@ namespace Lab4.Controllers
 
         // GET: api/Books/isbn/{isbn}
         [HttpGet("isbn/{isbn}")]
-        public ActionResult<IEnumerable<Book>> GetBookByISBN(string isbn)
+        public ActionResult<Book> GetBookByISBN(string isbn)
         {
             var book = catalog.SearchByISBN(isbn).FirstOrDefault();
             if (book == null)
